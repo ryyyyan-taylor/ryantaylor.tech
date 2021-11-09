@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>brrrr</title>
+	<script src="random.js"></script>
+	<style>
+		body {
+			zoom: 5;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="radio" id="1p" name="numplayers" value="p1" checked="checked">
+	<label for="1p">1 Player</label><br>
+	<input type="radio" id="2p" name="numplayers" value="p2">
+	<label for="2p">2 Players</label><br>
+
+	<label for="size">Char sizes:</label>
+	<select id="size" name="size">
+		<option value="allsizes">All</option>
+		<option value="small">Small</option>
+		<option value="medium">Medium</option>
+		<option value="large">Large</option>
+	</select>
+	<br>
+
+	<label for="drift">Drift Type:</label>
+	<select id="drift" name="drift">
+		<option value="alldrift">All</option>
+		<option value="inside">Inside</option>
+		<option value="outside">Outside</option>
+	</select>
+	<br>
+
+	<label for="vehicle">Vehicle Type:</label>
+	<select id="vehicle" name="vehicle">
+		<option value="allvehicles">All</option>
+		<option value="karts">Karts</option>
+		<option value="bikes">Bikes</option>
+	</select>
+	<br>
+
+	<button type="button" onclick="myFunction()">Go</button>
+
+	<br>
+	<p id ="whichChar"></p>
+	<p id ="whichVeh"></p>
+</body>
+</html>
