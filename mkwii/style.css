@@ -1,0 +1,29 @@
+label, select, button, .playerbox {
+	font-size: 200%;
+}
+
+ input[type='radio'] { 
+     transform: scale(1.5); 
+ }
+
+#output {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.playerbox {
+	padding: 20px;
+	margin: 10px;
+	border: 1px solid gray;
+}
+
+#tierlist{
+	padding-left: 30px;
+}
+
+.winner {
+	display: none;
+}
