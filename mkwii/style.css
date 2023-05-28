@@ -1,9 +1,31 @@
-label, select, button, .playerbox {
+/* label, select, button, .playerbox {
 	font-size: 200%;
+} */
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+	font-size: 150%;
+	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
- input[type='radio'] { 
-     transform: scale(1.5); 
+[role="button"] {
+	cursor: pointer;
+	padding: 1rem;
+	margin: 10px;
+	border-radius: 0.25rem;
+  }
+
+.form-inline{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.form-inline input { 
+	vertical-align: center;
+    transform: scale(1.5); 
  }
 
 #output {
@@ -15,15 +37,58 @@ label, select, button, .playerbox {
 }
 
 .playerbox {
-	padding: 20px;
+	padding: 1rem;
 	margin: 10px;
-	border: 1px solid gray;
+	border-radius: 0.25rem;
+	box-shadow: 0 0 0 2px #fd7e14;
+	width: 45vw;
 }
 
-#tierlist{
+/* #tierlist{
 	padding-left: 30px;
-}
+} */
 
 .winner {
 	display: none;
+}
+
+.specs {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#choice {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+
+#go {
+	width: 20%;
+}
+
+#lists {
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+}
+
+#whichChar, #whichChar2, #whichVeh, #whichVeh2 {
+	display: none;
+}
+
+#w1 {
+	background-color: gold;
+	font-size: 175%;
+}
+
+#w2 {
+	background-color: lightskyblue;
+	font-size: 175%;
+}
+
+#syncbtn {
+	font-size: 175%;
+	background-color: deeppink;
 }

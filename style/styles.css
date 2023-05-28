@@ -1,0 +1,21 @@
+#navText {
+    color: white;
+}
+
+.container {
+	margin-left: 5px;
+}
+
+td, th {
+	border: 1px solid grey;
+	padding: 5px;
+}
+
+#portrait {
+	/*width:500px;*/
+	display: block;
+	height: 625px;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto; 
+}

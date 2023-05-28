@@ -1,362 +1,309 @@
 const chars = [
-"Baby Mario",
-"Baby Luigi",
-"Baby Peach",
-"Baby Daisy",
-"Toad",
-"Toadette",
-"Koopa Troopa",
-"Dry Bones",
-"Mario",
-"Luigi",
-"Peach",
-"Daisy",
-"Yoshi",
-"Birdo",
-"Diddy Kong",
-"Bowser Jr.",
-"Wario",
-"Waluigi",
-"Donkey Kong",
-"Bowser",
-"King Boo",
-"Rosalina",
-"Funky Kong",
-"Dry Bowser"
+	"Baby Mario",
+	"Baby Luigi",
+	"Baby Peach",
+	"Baby Daisy",
+	"Toad",
+	"Toadette",
+	"Wet Bones",
+	"Dry Bones",
+	"Mario",
+	"Luigi",
+	"Peach",
+	"Daisy",
+	"Yoshi",
+	"Birdo",
+	"Diddy Kong",
+	"Bowser Jr.",
+	"Wario",
+	"Waluigi",
+	"Donkey Kong",
+	"Wet Bowser",
+	"King Boo",
+	"Rosalina",
+	"Funky Kong",
+	"Dry Bowser"
 ];
 
 const smallk = [
-"Standard Kart S",
-"Baby Booster",
-"Mini Beast",
-"Cheep Charger",
-"Tiny Titan",
-"Blue Falcon"
+	"Standard Kart S",
+	"Baby Booster",
+	"Mini Beast",
+	"Cheep Charger",
+	"Tiny Titan",
+	"Blue Falcon"
 ];
 
 const smallb = [
-"Standard Bike S",
-"Bullet Bike",
-"Bit Bike",
-"Quacker",
-"Magikruiser",
-"Jet Bubble"
+	"Standard Bike S",
+	"Bullet Bike",
+	"Bit Bike",
+	"Quacker",
+	"Magikruiser",
+	"Jet Bubble"
 ];
 
 
 const medk = [
-"Standard Kart M",
-"Classic Dragster",
-"Wild Wing",
-"Super Blooper",
-"Daytripper",
-"Sprinter"
+	"Standard Kart M",
+	"Classic Dragster",
+	"Wild Wing",
+	"Super Blooper",
+	"Daytripper",
+	"Sprinter"
 ];
 
 const medb = [
-"Standard Bike M",
-"Mach Bike",
-"Sugarscoot",
-"Zip Zip",
-"Sneakster",
-"Dolphin Dasher"
+	"Standard Bike M",
+	"Mach Bike",
+	"Sugarscoot",
+	"Zip Zip",
+	"Sneakster",
+	"Dolphin Dasher"
 ];
 
 const largek = [
-"Standard Kart L",
-"Offroader",
-"Flame Flyer",
-"Piranha Prowler",
-"Jetsetter",
-"Honeycoupe"
+	"Standard Kart L",
+	"Offroader",
+	"Flame Flyer",
+	"Piranha Prowler",
+	"Jetsetter",
+	"Honeycoupe"
 ];
 
 const largeb = [
-"Standard Bike L",
-"Flame Runner",
-"Wario Bike",
-"Shooting Star",
-"Spear",
-"Phantom"
+	"Standard Bike L",
+	"Flame Runner",
+	"Wario Bike",
+	"Shooting Star",
+	"Spear",
+	"Phantom"
 ];
 
-const insideb = [
-"Bullet Bike",
-"Quacker",
-"Magikruiser",
-"Jet Bubble",
-
-"Mach Bike",
-"Sneakster",
-"Dolphin Dasher",
-
-"Flame Runner",
-"Spear"
+const courselist = [
+	"Luigi Circuit",
+	"Moo Moo Meadows",
+	"Mushroom Gorge",
+	"Toad's Factory",
+	"Mario Circuit",
+	"Coconut Mall",
+	"DK Summit",
+	"Wario's Gold Mine",
+	"Daisy Circuit",
+	"Koopa Cape",
+	"Maple Treeway",
+	"Grumble Volcano",
+	"Dry Dry Ruins",
+	"Moonview Highway",
+	"BC Wii",
+	"GCN Peach Beach",
+	"DS Yoshi Falls",
+	"SNES Ghost Valley 2",
+	"N64 Mario Raceway",
+	"N64 Sherbet Land",
+	"GBA Shy Guy Beach",
+	"DS Delfino Square",
+	"GCN Waluigi Stadium",
+	"DS Desert Hills",
+	"BC 3",
+	"N64 DK's Jungle Parkway",
+	"GCN Mario Circuit",
+	"SNES Mario Circuit 3",
+	"DS Peach Gardens",
+	"GCN DK Mountain",
+	"BC 64"
 ];
 
-
-window.onload = function gettierlist(){
-	readTextFile("/Users/danlaskarzewski/Downloads/user.json", function(text){
-		var data = JSON.parse(text);
-		console.log(data);
-	});
+window.onload = function gettierlist() {
+	// myFunction();
+	betterLoad();
 }
 
-function readTextFile(file, callback) {
-	var rawFile = new XMLHttpRequest();
-	rawFile.overrideMimeType("application/json");
-	rawFile.open("GET", file, true);
-	rawFile.onreadystatechange = function() {
-		if (rawFile.readyState === 4 && rawFile.status == "200") {
-			callback(rawFile.responseText);
-		}
-	}
-	rawFile.send(null);
-}
+function betterLoad() {
 
-function myFunction(){
-	var size = document.getElementsByName("size")[0].value;
-	var drift = document.getElementsByName("drift")[0].value;
-	var vehicle = document.getElementsByName("vehicle")[0].value;
-	var ch;
-	var chsize;
-	var veh;
-	var plist = []; 
-	var numP = 1;
-	var vlist = [];
-
-
-	var tierlist = document.getElementById("tierlist");
+	// GET PAGE ELEMENTS
+	var tierlist = document.getElementById("vehs");
 	var tierlist2 = tierlist.getElementsByTagName("li");
+	var charlist = document.getElementById("chars");
+	var charlist2 = charlist.getElementsByTagName("li")
 
+
+
+	// RESET COLORS
 	for (var i = 0; i < tierlist2.length; i++) {
 		tierlist2[i].style = "background-color: none";
 	}
-
-
-	var p = document.querySelector('input[name="numplayers"]:checked').value;
-	if(p == "p2")
-		numP = 2;
-
-	for(let i = 0; i < numP; i++){
-		if(size == "allsizes"){
-			ch = Math.floor(Math.random() * chars.length);
-		}
-		if(size == "small"){
-			ch = Math.floor(Math.random() * 8);
-		}
-		if(size == "medium"){
-			ch = Math.floor(Math.random() * 8) + 8;
-		}
-		if(size == "large"){
-			ch = Math.floor(Math.random() * 8) + 16;
-		}
-
-		if(i == 1)
-			if(ch == plist[0])
-				if(ch%8==0)
-					ch++;
-				else ch--;
-		plist.push(ch)
+	for (var i = 0; i < charlist2.length; i++) {
+		charlist2[i].style = "background-color: none";
 	}
 
-	var toplay = [];
-	for(let i = 0; i<plist.length; i++){
-		toplay.push(chars[plist[i]]);
+	// GET CHARACTERS
+	const shuffled = [...chars].sort(() => 0.5 - Math.random());
+	var toPlay = shuffled.slice(0, 2);
+
+	console.log(toPlay)
+
+	// GET VEHICLES
+	var vlist = []
+	for (let i = 0; i < toPlay.length; i++) {
+		var vehs = [];
+		find = chars.indexOf(toPlay[i]);
+		if (find < 8)
+			vehs = smallk.concat(smallb);
+		else if (find < 16)
+			vehs = medk.concat(medb);
+		else
+			vehs = largek.concat(largeb);
+
+		var index = Math.floor(Math.random() * vehs.length)
+		var newveh = vehs[index];
+		vlist.push(newveh);
 	}
 
-
-	document.getElementById("whichChar").innerHTML = toplay[0];
-	if (numP == 2)
-		document.getElementById("whichChar2").innerHTML = toplay[1];
-
-
-	for(let i = 0; i<plist.length; i++){
-
-		if(plist[i]<8)
-			chsize = "small";
-		else if (plist[i]<16)
-			chsize = "med";
-		else 
-			chsize = "large";
-
-
-
-		if (chsize == "small")
-			veh = [...smallk, ...smallb];
-		if (chsize == "med")
-			veh = [...medk, ...medb];
-		if (chsize == "large")
-			veh = [...largek, ...largeb];
-
-
-		if(drift == "inside"){
-			veh = veh.filter(x => insideb.includes(x));
-		}
-		if(drift == "outside"){
-			veh = veh.filter(x => !insideb.includes(x));
-		}
-
-		if(vehicle == "karts"){
-			if (chsize == "small")
-				veh = veh.filter(x => smallk.includes(x));
-			if (chsize == "med")
-				veh = veh.filter(x => medk.includes(x));
-			if (chsize == "large")
-				veh = veh.filter(x => largek.includes(x));
-			
-		}
-		if (vehicle == "bikes"){
-			if (chsize == "small")
-				veh = veh.filter(x => smallb.includes(x));
-			if (chsize == "med")
-				veh = veh.filter(x => medb.includes(x));
-			if (chsize == "large")
-				veh = veh.filter(x => largeb.includes(x));
-		}
-
-		var v = Math.floor(Math.random() * veh.length);
-		vlist.push(veh[v]);
-
-
-		for(s in veh){
-			console.log(veh[s]);
-		}
-		console.log("-");
-
-	}
-
+	// FILL BOXES ON PAGE
 	document.getElementById("whichVeh").innerHTML = vlist[0];
 	document.getElementById("w1").style = "display:inline"
-	if (numP == 2){
-		document.getElementById("whichVeh2").innerHTML = vlist[1];
-		document.getElementById("w2").style = "display:inline"
-	}
-	
+	document.getElementById("whichVeh2").innerHTML = vlist[1];
+	document.getElementById("w2").style = "display:inline"
 
+	document.getElementById("whichChar").innerHTML = toPlay[0];
+	document.getElementById("whichChar2").innerHTML = toPlay[1];
 
-	console.log("------");
-
-
-	var tierlist = document.getElementById("tierlist");
+	// HIGHLIGHTS
+	var tierlist = document.getElementById("vehs");
 	var tierlist2 = tierlist.getElementsByTagName("li");
+	var charlist = document.getElementById("chars");
+	var charlist2 = charlist.getElementsByTagName("li")
 
+	var charcount = 0
 
 	for (var i = 0; i < tierlist2.length; i++) {
-		if(tierlist2[i].innerHTML == vlist[0] || tierlist2[i].innerHTML == vlist[1]) {
-			console.log("changing color")
-			// console.log(tierlist2[i].innerHTML)
-			tierlist2[i].style = "background-color: yellow";
+		if (tierlist2[i].innerHTML == vlist[0]) {
+			tierlist2[i].style = "background-color: gold; font-size: 225%";
+		}
+		else if (tierlist2[i].innerHTML == vlist[1]) {
+			tierlist2[i].style = "background-color: lightskyblue; font-size: 225%";
+		}
+		if (charcount < 2) {
+			if (charlist2[i].innerHTML == toPlay[0]) {
+				charlist2[i].style = "background-color: gold; font-size: 225%";
+				charcount++;
+			}
+			else if (charlist2[i].innerHTML == toPlay[1]) {
+				charlist2[i].style = "background-color: lightskyblue; font-size: 225%";
+				charcount++;
+			}
 		}
 	}
+
+	courses();
+
 }
 
-function win(){
-	console.log("win2");
-	var tierlist = document.getElementById("tierlist");
-	var tierlist2 = tierlist.getElementsByTagName("li");
-	var winveh = document.getElementById("whichVeh");
-	var lossveh = document.getElementById("whichVeh2");
+function courses() {
+	var random = courselist.sort(() => .5 - Math.random()).slice(0, 3);
+	document.getElementById("courselist").innerHTML = random;
+}
 
-	console.log("vars");
+function win(buttonid) {
+	console.log("win");
+
+	if (buttonid == 1) {
+		var winveh = document.getElementById("whichVeh");
+		var lossveh = document.getElementById("whichVeh2");
+		var winchar = document.getElementById("whichChar");
+		var losschar = document.getElementById("whichChar2");
+	} else {
+		var winveh = document.getElementById("whichVeh2");
+		var lossveh = document.getElementById("whichVeh");
+		var winchar = document.getElementById("whichChar2");
+		var losschar = document.getElementById("whichChar");
+	}
+
+	var tierlist = document.getElementById("vehs");
+	var tierlist2 = tierlist.getElementsByTagName("li");
+	var charlist = document.getElementById("chars");
+	var charlist2 = charlist.getElementsByTagName("li")
+
+
+	// VEHICLES
 	var swap = true;
 	var swapped = false;
 
 	for (var i = 0; i < tierlist2.length; i++) {
-		if (swap){
-			if(tierlist2[i].innerHTML == winveh.innerHTML){
+		if (swap) {
+			if (tierlist2[i].innerHTML == winveh.innerHTML) {
 				swap = false;
-				if (swapped){
+				if (swapped) {
 					tierlist2[i].innerHTML = lossveh.innerHTML;
 					console.log("swapped winner vehicle to lower spot");
 				}
-
 			}
-			else if(tierlist2[i].innerHTML == lossveh.innerHTML){
+			else if (tierlist2[i].innerHTML == lossveh.innerHTML) {
 				tierlist2[i].innerHTML = winveh.innerHTML;
 				console.log("swapped loser out of top place");
 				swapped = true;
 			}
 		}
 	}
-	console.log("loop");
 
 	var newtierlist = [];
 	for (var i = 0; i < tierlist2.length; i++) {
 		s = tierlist2[i].innerHTML;
 		newtierlist.push(s);
 	}
+	document.getElementById('vehsout').value = newtierlist;
 
-	document.getElementById("list").value = newtierlist
-
-}
-
-function win2(){
-	console.log("win2");
-	var tierlist = document.getElementById("tierlist");
-	var tierlist2 = tierlist.getElementsByTagName("li");
-	var winveh = document.getElementById("whichVeh2");
-	var lossveh = document.getElementById("whichVeh");
-	
-	console.log("vars");
+	// CHARACTERS
 	var swap = true;
 	var swapped = false;
 
-	for (var i = 0; i < tierlist2.length; i++) {
-		if (swap == true){
-			if(tierlist2[i].innerHTML == winveh.innerHTML){
+	for (var i = 0; i < charlist2.length; i++) {
+		if (swap) {
+			if (charlist2[i].innerHTML == winchar.innerHTML) {
 				swap = false;
-				if (swapped){
-					tierlist2[i].innerHTML = lossveh.innerHTML;
-					console.log("swapped winner vehicle to lower spot");
+				if (swapped) {
+					charlist2[i].innerHTML = losschar.innerHTML;
+					console.log("swapped winner character to lower spot");
 				}
-
 			}
-			else if(tierlist2[i].innerHTML == lossveh.innerHTML){
-				tierlist2[i].innerHTML = winveh.innerHTML;
-				console.log("swapped loser out of top place");
+			else if (charlist2[i].innerHTML == losschar.innerHTML) {
+				charlist2[i].innerHTML = winchar.innerHTML;
+				console.log("swapped loser character out of top place");
 				swapped = true;
 			}
 		}
 	}
-	console.log("loop");
 
-	var newtierlist = [];
+	var newcharlist = [];
+	for (var i = 0; i < charlist2.length; i++) {
+		s = charlist2[i].innerHTML;
+		newcharlist.push(s);
+	}
+	document.getElementById('charsout').value = newcharlist;
+
+	var veh1 = document.getElementById("whichVeh");
+	var veh2 = document.getElementById("whichVeh2");
+
+	var char1 = document.getElementById("whichChar");
+	var char2 = document.getElementById("whichChar2");
+
+
 	for (var i = 0; i < tierlist2.length; i++) {
-		s = tierlist2[i].innerHTML;
-		newtierlist.push(s);
+		if (tierlist2[i].innerHTML == veh1.innerHTML) {
+			tierlist2[i].style.backgroundColor = "gold";
+		}
+		else if (tierlist2[i].innerHTML == veh2.innerHTML) {
+			tierlist2[i].style.backgroundColor = "lightskyblue";
+		}
 	}
-
-	document.getElementById("list").value = newtierlist
-}
-
-
-function convertToJSON(tl) {
-	console.log(tl);
-	var jsonObject = {
-	"tierlist": tl
+	for (var i = 0; i < charlist2.length; i++) {
+		if (charlist2[i].innerHTML == char1.innerHTML) {
+			charlist2[i].style.backgroundColor = "gold";
+		}
+		else if (charlist2[i].innerHTML == char2.innerHTML) {
+			charlist2[i].style.backgroundColor = "lightskyblue"
+		}
 	}
-
-	document.getElementById('output').value = JSON.stringify(jsonObject);
-}
-
-function saveToFile(tl) {
-	convertToJSON(tl);
-	var jsonObjectAsString = document.getElementById('output').value;
-
-	var blob = new Blob([jsonObjectAsString], {
-	//type: 'application/json'
-	type: 'octet/stream'
-	});
-	console.log(blob);
-
-	var anchor = document.createElement('a');
-	anchor.download = "user.json";
-	anchor.href = window.URL.createObjectURL(blob);
-	anchor.innerHTML = " ";
-	anchor.click();
-
-	console.log(anchor);
-
-	document.getElementById('output').append(anchor);
+	console.log(veh1, veh2, char1, char2)
 }
