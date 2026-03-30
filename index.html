@@ -43,16 +43,19 @@
           <img src="./assets/img/headshot.jpg" alt="Ryan Taylor" class="profile-image">
         </div>
         <div class="about-content">
-          <h3>Hi there!</h3>
+          <!-- <h3>A bit about me</h3> -->
           <p>
-            Thanks for visiting my site! I'm currently supporting an Internal
-            Research and Design (IRAD) initiative at Raytheon designing
-            purpose-built Linux systems.
+            I'm a Systems &amp; Automation Engineer with 3+ years at Raytheon building and
+            maintaining infrastructure for large-scale aerospace programs. I specialize in
+            Linux systems, infrastructure automation, and developer tooling.
+          </p>
+          <p>
+            Outside of work I run a homelab, work on a ton of little personal projects,
+            play a lot of Magic the Gathering, and fly first-person-view drones and planes.
           </p>
           <ul class="info-list">
             <li><strong>From:</strong> Long Beach, CA</li>
             <li><strong>Lives In:</strong> Broomfield, CO</li>
-            <li><strong>Age:</strong> 25</li>
           </ul>
           <a href="./assets/Ryan_Taylor_resume.pdf" class="btn" download>
           <span>↓</span> Download Resume
@@ -67,6 +70,27 @@
     <div class="container">
       <h2 class="section-title">Experience</h2>
       <div class="timeline">
+        <!-- IRAD ENTRY — fill in stubs before publishing -->
+        <div class="timeline-item">
+          <div class="timeline-date">September 2025 - Present</div>
+          <div class="timeline-title">Systems Engineer</div>
+          <!-- TODO: confirm program name is cleared for public disclosure with your security officer -->
+          <div class="timeline-company">Raytheon | Internal R&amp;D | Aurora, CO</div>
+          <div class="timeline-description">
+            <ul>
+              <!-- TODO: confirm tech stack details are safe to list -->
+              <li>Designing and building purpose-built Linux systems for a next-generation internal R&amp;D program</li>
+              <!-- SUGGESTED: drop "purpose-built" and "next-generation" — both sound like marketing copy.
+                   Try something like: "Building and maintaining Linux systems for an early-stage R&D program"
+                   or get specific about your actual day-to-day if it's safe to: "Designing the OS-level
+                   configuration and build process for a custom embedded Linux system" -->
+              <li>Developed automation tooling to support rapid iteration across development environments</li>
+              <!-- SUGGESTED: "rapid iteration" reads startup-y. Try: "Built automation tooling to reduce
+                   manual setup time and keep dev environments consistent across the team" -->
+              <!-- TODO: add 1-2 more bullets covering your role — keep to responsibilities, not architecture -->
+            </ul>
+          </div>
+        </div>
         <div class="timeline-item">
           <div class="timeline-date">June - September 2025</div>
           <div class="timeline-title">Systems Infrastructure Engineer</div>
@@ -74,9 +98,21 @@
           <div class="timeline-description">
             <ul>
               <li>Automated multi-environment VMWare VM lifecycle using Terraform</li>
+              <!-- SUGGESTED: give it more ownership and scope — "Owned VM lifecycle automation across
+                   multiple environments using Terraform, covering provisioning through teardown" -->
               <li>Developed idempotent Ansible playbooks for whole-environment configuration</li>
+              <!-- SUGGESTED: "idempotent" is correct but jargon-y for a personal site. Try: "Wrote Ansible
+                   playbooks to handle full-environment configuration repeatably from a single run" -->
               <li>Integrated Terraform and Ansible into existing CI/CD pipelines for automated infrastructure updates</li>
+              <!-- SUGGESTED: this is partially covered by the two bullets above — consider consolidating
+                   or making it concrete: "Wired Terraform and Ansible into the existing GitLab CI pipeline
+                   so environment changes deployed automatically on merge" -->
               <li>Worked with Git/GitLab for team collaboration and integration</li>
+              <!-- SUGGESTED: cut this — everyone uses git, and the CI/CD bullet already implies GitLab.
+                   Use the space for something that says more about what it was like working on JWST
+                   infrastructure specifically, even something brief like: "Supported ground system
+                   infrastructure for the James Webb Space Telescope program" as a lead sentence
+                   rather than a bullet — the name alone carries a lot of weight -->
             </ul>
           </div>
         </div>
@@ -99,6 +135,27 @@
             <ul>
               <li>Provided support to SA team for groups/users, backups/recovery, and troubleshooting on RHEL systems</li>
             </ul>
+            <!--
+            SUGGESTED REWRITE — the sub-header structure reads like a ticketing system, not a portfolio.
+            These bullets cover a lot of real depth (3 years, full tool suite ownership, RHEL sysadmin work)
+            but none of them say what the scale was or why it mattered. Try collapsing to 4-5 flat bullets:
+
+            <ul>
+              <li>Sole administrator for the program's full Atlassian stack — Jira, Confluence, and
+                  Bitbucket — across multiple instances, handling installs, upgrades, and database
+                  migrations with no dedicated DBA</li>
+              <li>Built and maintained custom Jira workflows to enforce the program's Agile process
+                  and cut down on manual status tracking</li>
+              <li>Stood up and managed IBM ELM 6 and 7 instances (DNG, RQM, GC) with DB2 backends,
+                  including user access and license management for the full program team</li>
+              <li>Handled day-to-day RHEL sysadmin work alongside my tool admin duties — user/group
+                  management, backups, and troubleshooting for the SA team</li>
+            </ul>
+
+            The key changes: "Sole administrator" establishes ownership, "no dedicated DBA" shows
+            you were doing more than your job title suggested, and the RHEL bullet is honest about
+            what it was without overselling it.
+            -->
           </div>
         </div>
         <div class="timeline-item">
@@ -109,8 +166,16 @@
             <ul>
               <li>Managed all business for 6 person department grossing an average $250,000 per year</li>
               <li>Trained new associates to deliver high quality products and services</li>
+              <!-- SUGGESTED: too vague — "Onboarded and trained new hires on equipment, workflows,
+                   and customer expectations" is more concrete, or just cut it; the other bullets
+                   carry more weight -->
               <li>Significantly increased department sales by 60% leading to consistent exceeding of weekly budget goals</li>
+              <!-- SUGGESTED: "Significantly" is redundant when you have the number. Cut the tail too —
+                   it's already implied. Try: "Grew department sales by 60% over [timeframe]" — if you
+                   remember how long that took, include it, that context makes the number mean more -->
               <li>Delivered an average 95% customer service rating across an 8 month period</li>
+              <!-- SUGGESTED: good metric, keep it. Minor tweak: "Maintained a 95% customer satisfaction
+                   rating across 8 months" reads slightly cleaner -->
             </ul>
           </div>
         </div>
@@ -239,16 +304,11 @@
                 <span>✉</span> mail@ryantaylor.tech
               </a>
             </li>
-            <li>
-              <a href="tel:+13036425273">
-                <span>📱</span> (303) 642-5273
-              </a>
-            </li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Ryan Taylor. Built with pure HTML, CSS, and a sprinkle of JavaScript.</p>
+        <p>© 2026 Ryan Taylor. Built with pure HTML, CSS, and a sprinkle of JavaScript.</p>
       </div>
     </div>
 
