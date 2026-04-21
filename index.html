@@ -240,7 +240,10 @@
         <div class="project-item">
           <div class="project-info">
             <h3>WhatAmI.cooking</h3>
-            <p>A recipe suggestion and meal planning platform for indecisive cooks. Hosted on AWS with paid features to come.</p>
+            <p>A full-stack meal planning app built and deployed end-to-end on AWS. 
+              Features a React + TypeScript frontend with a 3D card-flip UI, a Python/FastAPI backend, and an event-driven AWS architecture (SNS fan-out → SQS → Lambda) for recipe ingestion, editing, and deletion. 
+              Includes OAuth authentication via AWS Cognito, DynamoDB for persistence, a weekly meal planner with drag-and-drop reordering, auto-generated shopping lists, and a URL importer that scrapes and parses recipes from any site. 
+              Deployed with CI/CD via GitHub Actions → Elastic Beanstalk.</p>
             <div class="project-tags">
               <span class="tag">AWS</span>
               <span class="tag">React</span>
@@ -268,8 +271,9 @@
         <div class="project-item">
           <div class="project-info">
             <h3>Deckbuilder</h3>
-            <p>A web-based deck builder for Magic: The Gathering, allowing users to create, save, and share decks.
-              Includes lots of custom features I wanted for my own deckbuilding needs that didn't exist in other tools.
+            <p>I built a full-featured Magic: The Gathering deck builder because the tools I was using never felt quite right. 
+              It pulls live card data from Scryfall, suggests cards via EDHREC, surfaces tournament results from EDHTop16 and MTGTop8, and lets you compare decks side-by-side. It's
+              the kind of project where the scope kept growing because I actually use it, and what started as a simple deck list builder turned into a full-blown deck management and analysis platform.
             </p>
             <div class="project-tags">
               <span class="tag">React</span>
@@ -298,8 +302,10 @@
         <div class="project-item">
           <div class="project-info">
             <h3>VimMail</h3>
-            <p>A Gmail client for web and mobile. 
-              Vim-inspired keybindings and a focus on keyboard navigation on desktop, streamlined mobile app for quick inbox management on the go.
+            <p>A keyboard-driven Gmail client built for power users who'd rather never touch their mouse. 
+              Inspired by Vim's modal editing, it lets you fly through your inbox with j/k navigation, visual-mode multi-select, and single-key actions for archive, trash, label, and search.
+              Built on top of the Gmail API with full OAuth authentication, real-time optimistic updates, and a virtualized list that handles thousands of emails without breaking a sweat. 
+              A companion Flutter mobile app brings the same read-and-organize workflow to your phone.
             </p>
             <div class="project-tags">
               <span class="tag">Next.js</span>
