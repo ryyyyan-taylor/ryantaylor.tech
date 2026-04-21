@@ -264,6 +264,22 @@ nav a.active::after {
   outline-offset: 2px;
 }
 
+.btn-subtle {
+  margin-top: var(--spacing-sm);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-color: rgba(184, 158, 255, 0.25);
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.btn-subtle:hover {
+  border-color: var(--accent-cta);
+  color: var(--accent-cta);
+  opacity: 1;
+}
+
 /* ===== Section ===== */
 section {
   padding: var(--spacing-xl) 0;
@@ -798,6 +814,7 @@ footer {
   color: var(--accent-primary);
   transform: translateX(4px);
 }
+
 
 .footer-bottom {
   text-align: center;
