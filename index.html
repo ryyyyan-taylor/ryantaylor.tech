@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ryan Taylor - Systems & Automation Engineer based in Broomfield, CO">
+  <meta name="description" content="Ryan Taylor - Platform & Infrastructure Engineer based in Broomfield, CO">
   <meta name="author" content="Ryan Taylor">
-  <title>Ryan Taylor | Systems & Automation Engineer</title>
+  <title>Ryan Taylor | Platform Engineer</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <a href="#home" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
   <nav>
     <div class="container">
       <a href="#home" class="logo">Ryan Taylor</a>
-      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
       <ul id="nav-menu">
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#interests">Outside of Work</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -31,8 +41,17 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-content fade-in">
+        <p class="hero-eyebrow">Hi, I'm</p>
         <h1>Ryan Taylor</h1>
-        <h2>Platform Engineer</h2>
+        <h2 class="hero-role"><span class="gradient-text">Platform Engineer</span></h2>
+        <p class="hero-desc">
+          Building automated, reproducible infrastructure for large-scale aerospace programs.
+          3+ years at Raytheon. DoD Secret clearance.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn">Get In Touch</a>
+        </div>
       </div>
     </div>
   </section>
@@ -46,28 +65,72 @@
           <img src="./assets/img/headshot.jpg" alt="Ryan Taylor" class="profile-image">
         </div>
         <div class="about-content">
-          <!-- <h3>A bit about me</h3> -->
           <p>
-            I'm a Platform & Infrastructure Engineer with 3+ years at Raytheon building automated, reproducible systems for large-scale aerospace programs. 
-            I specialize in infrastructure as code, CI/CD-integrated environment provisioning, and Linux systems — with a current focus on embedded Linux platform development. 
+            I'm a Platform & Infrastructure Engineer with 3+ years at Raytheon building automated, reproducible systems for large-scale aerospace programs.
+            I specialize in infrastructure as code, CI/CD-integrated environment provisioning, and Linux systems — with a current focus on embedded Linux platform development.
             I hold an active DoD Secret clearance.
           </p>
           <p>
             Outside of work I run a homelab, work on a ton of little personal projects,
-            play a lot of Magic the Gathering, and fly first-person-view drones and planes.
+            play a lot of Magic the Gathering and Star Wars: Unlimited, and fly first-person-view drones and planes.
           </p>
           <ul class="info-list">
             <li><strong>Clearance:</strong> Active DoD Secret</li>
             <li><strong>From:</strong> Long Beach, CA</li>
             <li><strong>Lives In:</strong> Broomfield, CO</li>
           </ul>
-          <a href="#contact" class="btn" download>
-            <span>Get In Touch</span>
-          </a>
-          <a href="./assets/Ryan_Taylor_resume.pdf" class="btn" download>
-            <span>↓</span> Download Resume
-          </a>
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="./assets/Ryan_Taylor_resume.pdf" class="btn" download>↓ Download Resume</a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Build Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">What I Build</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+          <h4>Infrastructure as Code</h4>
+          <p>Terraform and Ansible for reproducible VM provisioning, full lifecycle management, and configuration-as-code across multi-environment deployments.</p>
+        </div>
+
+        <div class="skill-card">
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+          </svg>
+          <h4>CI/CD & DevOps</h4>
+          <p>GitLab CI and GitHub Actions pipelines for end-to-end automated testing, build, and deployment — infrastructure provisioning triggered on merge.</p>
+        </div>
+
+        <div class="skill-card">
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <h4>Embedded Linux</h4>
+          <p>OS-level configuration and build systems for custom embedded Linux platforms, enabling version-controlled, reproducible system images for aerospace hardware.</p>
+        </div>
+
+        <div class="skill-card">
+          <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <h4>Full-Stack Development</h4>
+          <p>React, Next.js, and Python/FastAPI on AWS, Vercel, and Supabase — explored through personal projects, building full-stack apps end-to-end outside of work.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -94,7 +157,7 @@
           </div>
 
           <div class="timeline-position">
-            <div class="timeline-position-name">James-Webb Space Telescope</div>
+            <div class="timeline-position-name">James Webb Space Telescope</div>
             <div class="timeline-position-date">June 2025 – September 2025 (budget-driven RIF)</div>
             <div class="timeline-description">
               <ul>
@@ -146,83 +209,72 @@
               <div class="education-title">Computer Science</div>
               <div class="education-school">University of Colorado Boulder</div>
             </div>
-            <div class="education-date">2018 - 2022</div>
+            <div class="education-date">2018 – 2022</div>
           </div>
-          <p class="education-details">
-            Political Science Minor
-          </p>
+          <p class="education-details">Political Science Minor</p>
           <p class="education-details">
             <strong>Relevant Coursework:</strong> Network Systems, Linux System Administration,
             Operating Systems, Database Systems, Data Structures, Software Development Tools,
             Intro Data Science, Intro Artificial Intelligence
           </p>
         </div>
-        <!-- <div class="education-item">
-          <div class="education-header">
-            <div>
-              <div class="education-title">High School Diploma</div>
-              <div class="education-school">Long Beach Polytechnic High School</div>
-            </div>
-            <div class="education-date">2014 - 2018</div>
-          </div>
-          <p class="education-details">PACE Academy • 4.0 GPA</p>
-        </div> -->
       </div>
     </div>
   </section>
 
-  <!-- What I Do Section -->
+  <!-- Outside of Work Section -->
   <section id="interests">
     <div class="container">
       <h2 class="section-title">Outside of Work</h2>
       <div class="cards-grid">
 
         <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M8 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
             <path d="M12 9v2m0 4v2"></path>
           </svg>
-          <h4>Magic: The Gathering</h4>
+          <h4>Trading Card Games</h4>
           <p>
-            I've been playing Magic: The Gathering since 2011, mostly Modern and Legacy, but some Commander too more recently.
-            I play at Total Escape Games and have a reputation for playing Burn in Modern but really anything Red.
+            I've been playing Magic: the Gathering since 2011, mostly Modern and Legacy — but some Commander lately.
+            I play at Total Escape Games and have a reputation for playing Burn in Modern, or really anything Red.
+            Recently I've also been having a lot of fun exploring Star Wars: Unlimited!
           </p>
         </div>
 
         <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14M12 5v14M8 9l-3-3M16 9l3-3M8 15l-3 3M16 15l3 3"></path>
           </svg>
           <h4>FPV Flying</h4>
           <p>
-            I fly both freestyle drones and fixed-wing planes with First-Person-View video systems.
-            I build all my own aircraft and have been flying fixed-wing since 2015 and drones since 2017.
-            When Colorado weather allows I fly at a ton of local fields or drive up into the mountains for some crazy views.
+            I fly both freestyle drones and fixed-wing planes with FPV systems.
+            I build all my own aircraft and have been flying since 2015.
+            When Colorado weather allows I fly local fields or head up into the mountains.
           </p>
         </div>
 
         <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="2" y1="20" x2="22" y2="20"></line>
             <line x1="6" y1="17" x2="18" y2="17"></line>
           </svg>
           <h4>Homelab</h4>
           <p>
-            I run a Proxmox server at home hosting a number of game servers for my friends and me, as well as some self-hosted services
-            including Pi-hole and Cloudflare Tunnels. It's my main sandbox for trying out new tools and keeping my skills sharp outside of work. 
+            I run a Proxmox server hosting game servers for friends, Pi-hole, and Cloudflare Tunnels.
+            It's my main sandbox for trying out new tools and keeping skills sharp outside of work.
           </p>
         </div>
 
         <div class="card">
-          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="4 17 10 11 4 5"></polyline>
             <line x1="12" y1="19" x2="20" y2="19"></line>
           </svg>
-          <h4>Linux & Open Source</h4>
+          <h4>Linux &amp; Open Source</h4>
           <p>
-            My daily machines run EndeavorOS and CachyOS. I love digging into dotfiles, trying new distros, and generally spending more time
-            configuring my setup than actually using it.
+            My daily machines run EndeavorOS and CachyOS. I love digging into dotfiles, trying new distros,
+            and generally spending more time configuring my setup than using it.
           </p>
         </div>
 
@@ -236,26 +288,24 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-list">
 
-        <!-- Project 1 placeholder -->
         <div class="project-item">
           <div class="project-info">
             <h3>WhatAmI.cooking</h3>
-            <p>A full-stack meal planning app built and deployed end-to-end on AWS. 
-              Features a React + TypeScript frontend with a 3D card-flip UI, a Python/FastAPI backend, and an event-driven AWS architecture (SNS fan-out → SQS → Lambda) for recipe ingestion, editing, and deletion. 
-              Includes OAuth authentication via AWS Cognito, DynamoDB for persistence, a weekly meal planner with drag-and-drop reordering, auto-generated shopping lists, and a URL importer that scrapes and parses recipes from any site. 
+            <p>A full-stack meal planning app built and deployed end-to-end on AWS.
+              Includes OAuth via AWS Cognito, DynamoDB persistence, a weekly meal planner, auto-generated shopping lists, and a URL importer that scrapes recipes from any site.
               Deployed with CI/CD via GitHub Actions → Elastic Beanstalk.</p>
             <div class="project-tags">
               <span class="tag">AWS</span>
               <span class="tag">React</span>
-              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
             </div>
             <a href="https://whatami.cooking/about" target="_blank" rel="noopener noreferrer" class="btn">Learn More</a>
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/home.png" alt="Screenshot 1"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/week.png" alt="Screenshot 2"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/add.png" alt="Screenshot 3"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/home.png" alt="WhatAmI.cooking home screen"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/week.png" alt="Weekly meal planner view"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/whatami.cooking/add.png" alt="Add recipe screen"></div>
             </div>
             <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
             <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
@@ -267,13 +317,12 @@
           </div>
         </div>
 
-        <!-- Project 2 placeholder -->
         <div class="project-item">
           <div class="project-info">
             <h3>Deckbuilder</h3>
-            <p>I built a full-featured Magic: The Gathering deck builder because the tools I was using never felt quite right. 
-              It pulls live card data from Scryfall, suggests cards via EDHREC, surfaces tournament results from EDHTop16 and MTGTop8, and lets you compare decks side-by-side. It's
-              the kind of project where the scope kept growing because I actually use it, and what started as a simple deck list builder turned into a full-blown deck management and analysis platform.
+            <p>A full-featured Magic: The Gathering and Star Wars: Unlimited deck builder built because the tools I was using never felt quite right.
+              Pulls live card data from Scryfall, suggests cards via EDHREC, and surfaces tournament results from EDHTop16 and MTGTop8.
+              What started as a simple deck list builder grew into a full deck management and analysis platform as I actually used it.
             </p>
             <div class="project-tags">
               <span class="tag">React</span>
@@ -284,9 +333,9 @@
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/deck.png" alt="Screenshot 2"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/results.png" alt="Screenshot 3"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/sideboard.png" alt="Screenshot 1"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/deck.png" alt="Deck view"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/results.png" alt="Search results"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/deckbuilder/sideboard.png" alt="Sideboard view"></div>
             </div>
             <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
             <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
@@ -298,18 +347,15 @@
           </div>
         </div>
 
-
         <div class="project-item">
           <div class="project-info">
             <h3>VimMail</h3>
-            <p>A keyboard-driven Gmail client built for power users who'd rather never touch their mouse. 
-              Inspired by Vim's modal editing, it lets you fly through your inbox with j/k navigation, visual-mode multi-select, and single-key actions for archive, trash, label, and search.
-              Built on top of the Gmail API with full OAuth authentication, real-time optimistic updates, and a virtualized list that handles thousands of emails without breaking a sweat. 
-              A companion Flutter mobile app brings the same read-and-organize workflow to your phone.
+            <p>A keyboard-driven Gmail client inspired by Vim's modal editing.
+              A companion Flutter app brings the same visual styling and quick mail triaging to mobile.
             </p>
             <div class="project-tags">
               <span class="tag">Next.js</span>
-              <span class="tag">Google Auth</span>
+              <span class="tag">Gmail API</span>
               <span class="tag">Flutter</span>
             </div>
             <a href="https://github.com/ryyyyan-taylor/mail-client" target="_blank" rel="noopener noreferrer" class="btn">Web GitHub</a>
@@ -317,8 +363,8 @@
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/main.png" alt="Screenshot 1"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/visual.png" alt="Screenshot 2"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/main.png" alt="VimMail inbox view"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/visual.png" alt="VimMail visual mode"></div>
             </div>
             <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
             <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
@@ -332,20 +378,19 @@
         <div class="project-item">
           <div class="project-info">
             <h3>Calorie Tracker</h3>
-            <p>A web-based mobile-first calorie tracking app with plain-text food logging and AI-powered parsing.
-              Focused on ease of entry and smart features to minimize manual input.
+            <p>A mobile-first calorie tracking app with plain-text food logging and AI-powered parsing.
             </p>
             <div class="project-tags">
               <span class="tag">Next.js</span>
-              <span class="tag">GPT‑4o mini</span>
+              <span class="tag">GPT-4o mini</span>
               <span class="tag">Supabase</span>
             </div>
             <a href="https://github.com/ryyyyan-taylor/calorie-tracker" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
           </div>
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/main.png" alt="Screenshot 1"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/entry.png" alt="Screenshot 2"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/main.png" alt="Calorie tracker main view"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/entry.png" alt="Food entry screen"></div>
             </div>
             <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
             <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
@@ -395,7 +440,7 @@
             </li>
           </ul>
           <a href="./assets/Ryan_Taylor_resume.pdf" class="btn btn-subtle" download>
-            <span>↓</span> Download Resume
+            ↓ Download Resume
           </a>
         </div>
       </div>
@@ -403,6 +448,7 @@
         <p>© 2026 Ryan Taylor. Built with pure HTML, CSS, and a sprinkle of JavaScript.</p>
       </div>
     </div>
+  </footer>
 
   <!-- Lightbox -->
   <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
