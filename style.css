@@ -79,25 +79,6 @@ body {
   position: relative;
 }
 
-/* ===== Background Gradient Blob ===== */
-body::after {
-  content: '';
-  position: fixed;
-  top: -20%;
-  right: -10%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(
-    circle at center,
-    rgba(139, 92, 246, 0.1) 0%,
-    rgba(45, 212, 191, 0.05) 45%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(80px);
-  border-radius: 50%;
-}
 
 /* ===== Cursor-Following Spotlight Effect ===== */
 body::before {
@@ -266,14 +247,6 @@ nav a.active::after {
   padding: var(--spacing-xl) 0 var(--spacing-lg);
 }
 
-.hero-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--accent-teal);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: var(--spacing-xs);
-}
 
 .hero-content h1 {
   color: var(--text-primary);
@@ -391,14 +364,6 @@ section:not(.hero) {
   letter-spacing: -0.02em;
 }
 
-.section-title::before {
-  content: '';
-  width: 36px;
-  height: 3px;
-  background: var(--accent-gradient);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
 
 /* ===== About Section ===== */
 .about-grid {
@@ -450,8 +415,8 @@ section:not(.hero) {
 
 .skill-card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--border-accent);
-  transform: translateY(-2px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 1px var(--accent-purple), 0 8px 32px -8px rgba(139, 92, 246, 0.2);
 }
 
 .skill-icon {
@@ -540,18 +505,9 @@ section:not(.hero) {
 }
 
 .timeline-description li {
-  position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   margin-bottom: 0.5rem;
-}
-
-.timeline-description li::before {
-  content: '▹';
-  position: absolute;
-  left: 0;
-  color: var(--accent-purple);
-  font-size: 1rem;
-  line-height: 1.5;
+  border-left: 2px solid var(--border-accent);
 }
 
 .timeline-position {
@@ -646,8 +602,8 @@ section:not(.hero) {
 
 .card:hover {
   background: var(--bg-card-hover);
-  border-color: var(--border-accent);
-  transform: translateY(-2px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 1px var(--accent-purple), 0 8px 32px -8px rgba(139, 92, 246, 0.2);
 }
 
 .card-icon {
@@ -1032,10 +988,6 @@ footer {
 
   .education-grid {
     grid-template-columns: 1fr;
-  }
-
-  .section-title::before {
-    width: 24px;
   }
 
   .cards-grid,
