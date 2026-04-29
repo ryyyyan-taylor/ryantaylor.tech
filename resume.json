@@ -104,7 +104,7 @@
     },
     {
       "name": "Linux Systems",
-      "keywords": ["RHEL", "Embedded Linux", "Yocto"]
+      "keywords": ["RHEL", "Embedded Linux"]
     },
     {
       "name": "Full-Stack Development",
