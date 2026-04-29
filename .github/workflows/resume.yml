@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
     paths:
-      - resume.json
+      - resume.tex
 
 permissions:
   contents: write
@@ -15,24 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
         with:
-          node-version: '18'
+          root_file: resume.tex
 
-      - name: Install resume-cli and theme
-        run: |
-          npm install -g resume-cli
-          npm install jsonresume-theme-stackoverflow
-
-      - name: Export resume to HTML
-        run: resume export resume.html --theme stackoverflow
-
-      - name: Convert HTML to PDF
-        run: |
-          google-chrome-stable --headless --no-sandbox \
-            --print-to-pdf="${GITHUB_WORKSPACE}/assets/Ryan_Taylor_resume.pdf" \
-            --no-pdf-header-footer \
-            "file://${GITHUB_WORKSPACE}/resume.html"
+      - name: Move PDF to assets
+        run: mv resume.pdf assets/Ryan_Taylor_resume.pdf
 
       - name: Commit PDF if changed
         run: |
