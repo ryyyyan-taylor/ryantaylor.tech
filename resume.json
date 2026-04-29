@@ -1,0 +1,158 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ryan Taylor",
+    "label": "Platform & Infrastructure Engineer",
+    "email": "mail@ryantaylor.tech",
+    "url": "https://ryantaylor.tech",
+    "summary": "Platform & Infrastructure Engineer with 3+ years at Raytheon building automated, reproducible systems for large-scale aerospace programs. Active DoD Secret clearance.",
+    "location": {
+      "city": "Broomfield",
+      "region": "CO",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ryyyyan-taylor",
+        "url": "https://github.com/ryyyyan-taylor"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "ryyyyan-taylor",
+        "url": "https://linkedin.com/in/ryyyyan-taylor"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Raytheon Intelligence & Space",
+      "position": "Systems Infrastructure Engineer — Internal R&D",
+      "location": "Aurora, CO",
+      "startDate": "2025-09",
+      "highlights": [
+        "Architected OS-level configuration and build systems for a custom embedded Linux platform, enabling reproducible and version-controlled system images",
+        "Shipped internal automation tooling to standardize and accelerate developer environment setup, cutting manual configuration overhead and onboarding time"
+      ]
+    },
+    {
+      "name": "Raytheon Intelligence & Space",
+      "position": "Systems Infrastructure Engineer — James Webb Space Telescope",
+      "location": "Aurora, CO",
+      "startDate": "2025-06",
+      "endDate": "2025-09",
+      "summary": "Budget-driven RIF",
+      "highlights": [
+        "Automated full VM lifecycle management across multiple environments by introducing Terraform infrastructure-as-code workflows",
+        "Developed Ansible-based configuration pipelines enabling consistent, repeatable environment provisioning from a single execution",
+        "Wired provisioning and configuration workflows into GitLab CI/CD, enabling fully automated environment deployment on merge"
+      ]
+    },
+    {
+      "name": "Raytheon Intelligence & Space",
+      "position": "Systems Infrastructure Engineer — GPS OCX 3F",
+      "location": "Aurora, CO",
+      "startDate": "2022-06",
+      "endDate": "2025-09",
+      "highlights": [
+        "Owned large-scale, multi-instance Atlassian environments (Jira, Confluence, Bitbucket) across deployments, upgrades, and migrations",
+        "Built custom Jira workflows to enforce Agile processes and eliminate manual tracking overhead",
+        "Stood up and maintained IBM ELM environments (DNG, RQM, GC) with DB2 backends supporting program-wide requirements and test management",
+        "Automated administrative workflows using Python and platform APIs, reducing repetitive operational tasks and improving system efficiency",
+        "Maintained production RHEL systems covering user management, patching, backups, and incident troubleshooting"
+      ]
+    },
+    {
+      "name": "Staples",
+      "position": "Print & Marketing Services Supervisor",
+      "location": "Boulder, CO",
+      "startDate": "2019-11",
+      "endDate": "2022-04",
+      "highlights": [
+        "Managed all operations for a 6-person department averaging $250K/year in revenue",
+        "Grew department sales by 60% over 12 months; maintained a 95% customer satisfaction rating"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Colorado Boulder",
+      "area": "Computer Science, Political Science Minor",
+      "studyType": "Bachelor of Science",
+      "startDate": "2018",
+      "endDate": "2022",
+      "courses": [
+        "Network Systems",
+        "Linux System Administration",
+        "Operating Systems",
+        "Database Systems",
+        "Data Structures",
+        "Software Development Tools",
+        "Intro Data Science",
+        "Intro Artificial Intelligence"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Infrastructure as Code",
+      "keywords": ["Terraform", "Ansible"]
+    },
+    {
+      "name": "CI/CD & DevOps",
+      "keywords": ["GitLab CI", "GitHub Actions"]
+    },
+    {
+      "name": "Linux Systems",
+      "keywords": ["RHEL", "Embedded Linux", "Yocto"]
+    },
+    {
+      "name": "Full-Stack Development",
+      "keywords": ["React", "Next.js", "Python", "FastAPI", "AWS", "Vercel", "Supabase"]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Trading Card Games",
+      "keywords": ["Magic: the Gathering", "Star Wars: Unlimited"]
+    },
+    {
+      "name": "FPV Flying",
+      "keywords": ["Freestyle Drones", "Fixed-Wing"]
+    },
+    {
+      "name": "Homelab",
+      "keywords": ["Proxmox", "Pi-hole", "Cloudflare Tunnels"]
+    },
+    {
+      "name": "Linux & Open Source",
+      "keywords": ["CachyOS", "EndeavorOS", "Dotfiles"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "WhatAmI.cooking",
+      "description": "Full-stack meal planning app with OAuth via AWS Cognito, DynamoDB persistence, weekly meal planner, auto-generated shopping lists, and a URL importer that scrapes recipes from any site. Deployed via GitHub Actions to AWS Elastic Beanstalk.",
+      "url": "https://whatami.cooking/about",
+      "keywords": ["React", "FastAPI", "AWS", "DynamoDB", "Cognito", "GitHub Actions"]
+    },
+    {
+      "name": "Deckbuilder",
+      "description": "Full-featured Magic: The Gathering and Star Wars: Unlimited deck builder pulling live card data from Scryfall, card suggestions from EDHREC, and tournament results from EDHTop16 and MTGTop8.",
+      "url": "https://github.com/ryyyyan-taylor/deckbuilder",
+      "keywords": ["React", "Vercel", "Supabase"]
+    },
+    {
+      "name": "VimMail",
+      "description": "Keyboard-driven Gmail client inspired by Vim's modal editing. A companion Flutter app brings the same visual styling and quick mail triaging to mobile.",
+      "url": "https://github.com/ryyyyan-taylor/mail-client",
+      "keywords": ["Next.js", "Gmail API", "Flutter"]
+    },
+    {
+      "name": "Calorie Tracker",
+      "description": "Mobile-first calorie tracking app with plain-text food logging and AI-powered parsing via GPT-4o mini.",
+      "url": "https://github.com/ryyyyan-taylor/calorie-tracker",
+      "keywords": ["Next.js", "GPT-4o mini", "Supabase"]
+    }
+  ]
+}
