@@ -134,7 +134,7 @@
       "name": "WhatAmI.cooking",
       "description": "Full-stack meal planning app with OAuth via AWS Cognito, DynamoDB persistence, weekly meal planner, auto-generated shopping lists, and a URL importer that scrapes recipes from any site. Deployed via GitHub Actions to AWS Elastic Beanstalk.",
       "url": "https://whatami.cooking/about",
-      "keywords": ["React", "FastAPI", "AWS", "DynamoDB", "Cognito", "GitHub Actions"]
+      "keywords": ["React", "FastAPI", "AWS", "DynamoDB", "Cognito"]
     },
     {
       "name": "Deckbuilder",
