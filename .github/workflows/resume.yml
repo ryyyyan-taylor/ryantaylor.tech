@@ -17,13 +17,15 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
-      - name: Install resumed and theme
-        run: npm install -g resumed jsonresume-theme-professional
+      - name: Install resume-cli and theme
+        run: |
+          npm install -g resume-cli
+          npm install jsonresume-theme-stackoverflow
 
       - name: Export resume to HTML
-        run: resumed render resume.json --theme jsonresume-theme-professional --output resume.html
+        run: resume export resume.html --theme stackoverflow
 
       - name: Convert HTML to PDF
         run: |
