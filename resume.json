@@ -93,7 +93,7 @@
   "skills": [
     {
       "name": "Infrastructure as Code",
-      "keywords": ["Terraform", "Ansible"]
+      "keywords": ["Terraform", "Ansible", "Kubernetes (k3s)"]
     },
     {
       "name": "CI/CD & DevOps",
