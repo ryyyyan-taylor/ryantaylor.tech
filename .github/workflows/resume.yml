@@ -20,7 +20,9 @@ jobs:
           node-version: '20'
 
       - name: Install resume-cli and theme
-        run: npm install -g resume-cli jsonresume-theme-even
+        run: |
+          npm install -g resume-cli
+          npm install jsonresume-theme-even
 
       - name: Export resume to HTML
         run: resume export resume.html --theme even
