@@ -20,10 +20,10 @@ jobs:
           node-version: '20'
 
       - name: Install resumed and theme
-        run: npm install -g resumed jsonresume-theme-even
+        run: npm install -g resumed jsonresume-theme-professional
 
       - name: Export resume to HTML
-        run: resumed render resume.json --theme jsonresume-theme-even --output resume.html
+        run: resumed render resume.json --theme jsonresume-theme-professional --output resume.html
 
       - name: Convert HTML to PDF
         run: |
