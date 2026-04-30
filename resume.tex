@@ -15,6 +15,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -35,7 +38,7 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
@@ -102,7 +105,7 @@
       \resumeSubSubheading
         {Internal R\&D}{September 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{Architected OS-level configuration and build systems for a custom embedded Linux platform, enabling reproducible and version-controlled system images}
+        \resumeItem{Architected OS-level configuration and build systems for a custom Linux appliance OS, enabling reproducible and version-controlled system images}
         \resumeItem{Shipped internal automation tooling to standardize and accelerate developer environment setup, cutting manual configuration overhead and onboarding time}
       \resumeItemListEnd
 
@@ -177,7 +180,7 @@
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       \textbf{Infrastructure \& DevOps}{: Terraform, Ansible, Kubernetes (k3s), GitHub Actions, Docker} \\
-      \textbf{Linux \& Systems}{: RHEL, Embedded Linux, Linux system administration} \\
+      \textbf{Linux \& Systems}{: RHEL, Linux appliance OS, Linux system administration} \\
       \textbf{Languages \& Frameworks}{: Python, Bash, React, Next.js, FastAPI} \\
       \textbf{Platforms \& Tools}{: AWS, Vercel, Supabase, Atlassian Suite, IBM ELM, Git} \\
       \textbf{Security Clearance}{: Active DoD Secret}
