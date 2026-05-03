@@ -43,6 +43,7 @@
 
 \pdfgentounicode=1
 
+
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -54,6 +55,14 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingNoTitle}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -78,8 +87,10 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
 %-------------------------------------------
 \begin{document}
+
 
 %----------HEADING----------
 \begin{center}
@@ -89,28 +100,33 @@
   (303) 642-5273 $|$
   \href{mailto:mail@ryantaylor.tech}{\underline{mail@ryantaylor.tech}} \\
   \href{https://ryantaylor.tech}{\underline{ryantaylor.tech}} $|$
-  \href{https://linkedin.com/in/ryyyyan-taylor}{\underline{linkedin.com/in/ryyyyan-taylor}}
+  \href{https://linkedin.com/in/ryantaylortech}{\underline{linkedin.com/in/ryyyyan-taylor}}
   % \href{https://github.com/ryyyyan-taylor}{\underline{github.com/ryyyyan-taylor}}
 \end{center}
+
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+  Platform \& Infrastructure Engineer with 3+ years at Raytheon designing automated, reproducible systems for high-profile DoD aerospace programs including GPS OCX and JWST. Expertise in infrastructure as code (Terraform, Ansible), CI/CD pipeline integration, container orchestration (Kubernetes), and Linux systems administration. Active DoD Secret clearance.
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
+    \resumeSubheadingNoTitle
       {Raytheon Intelligence \& Space}{June 2022 -- Present}
-      {Systems Infrastructure Engineer}{Aurora, CO}
+      {Aurora, CO}
 
       \resumeSubSubheading
-        {Internal R\&D}{September 2025 -- Present}
+        {Systems Infrastructure Engineer — Internal R\&D}{September 2025 -- Present}
       \resumeItemListStart
         \resumeItem{Architected OS-level configuration and build systems for a custom Linux appliance OS, enabling reproducible and version-controlled system images}
         \resumeItem{Shipped internal automation tooling to standardize and accelerate developer environment setup, cutting manual configuration overhead and onboarding time}
       \resumeItemListEnd
 
       \resumeSubSubheading
-        {James Webb Space Telescope}{June 2025 -- September 2025 {\normalfont(budget-driven RIF)}}
+        {Systems Infrastructure Engineer — James Webb Space Telescope}{June 2025 -- September 2025 {\normalfont(budget-driven RIF)}}
       \resumeItemListStart
         \resumeItem{Automated full VM lifecycle management across multiple environments by introducing Terraform infrastructure-as-code workflows}
         \resumeItem{Developed Ansible-based configuration pipelines enabling consistent, repeatable environment provisioning from a single execution}
@@ -118,7 +134,7 @@
       \resumeItemListEnd
 
       \resumeSubSubheading
-        {GPS OCX 3F}{June 2022 -- September 2025}
+        {Systems Infrastructure Engineer — GPS OCX 3F}{June 2022 -- September 2025}
       \resumeItemListStart
         \resumeItem{Owned large-scale, multi-instance Atlassian environments (Jira, Confluence, Bitbucket) across deployments, upgrades, and migrations}
         \resumeItem{Built custom Jira workflows to enforce Agile processes and eliminate manual tracking overhead}
@@ -131,8 +147,7 @@
       {Staples}{November 2019 -- April 2022}
       {Print \& Marketing Services Supervisor}{Boulder, CO}
       \resumeItemListStart
-        \resumeItem{Managed all operations for a 6-person department averaging \$250K/year in revenue}
-        \resumeItem{Grew department sales by 60\% over 12 months; maintained a 95\% customer satisfaction rating}
+        \resumeItem{Managed all operations for 6-person department averaging \$250K/year; grew sales 60\% from previous year; maintained a 95\% customer satisfaction rating}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -187,5 +202,6 @@
     }}
   \end{itemize}
 
+  
 %-------------------------------------------
 \end{document}
