@@ -31,6 +31,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "PDF unchanged, skipping commit"
           else
-            git commit -m "[skip ci] regen resume PDF"
+            git commit -m "regen resume PDF"
             git push
           fi
