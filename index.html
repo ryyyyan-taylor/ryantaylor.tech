@@ -260,7 +260,7 @@
           </svg>
           <h4>Homelab</h4>
           <p>
-            I run a Proxmox server hosting game servers for friends, Pi-hole, and Cloudflare Tunnels.
+            I run a Proxmox server hosting some game servers for friends and a three-VM Talos Kubernetes cluster.
             It's my main sandbox for trying out new tools and keeping skills sharp outside of work.
           </p>
         </div>
@@ -286,6 +286,40 @@
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-list">
+
+        <div class="project-item">
+          <div class="project-info">
+            <h3>HomeLab</h3>
+            <p>Single-node Proxmox host running a three-VM Talos Kubernetes cluster (1 control plane, 2 workers),
+              entirely defined in code. All are VMs provisioned with Terraform and configured by Ansible.
+              The cluster is managed via ArgoCD GitOps across 17 sync waves, deploying a full platform:
+              Traefik ingress with MetalLB and Let's Encrypt wildcard TLS, Authentik SSO with forward-auth on all services,
+              kube-prometheus-stack with Grafana dashboards, Loki + Promtail log aggregation, and Alertmanager
+              routing push notifications to ntfy. All secrets are SOPS-encrypted with age, decrypted in-cluster via KSOPS.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Terraform</span>
+              <span class="tag">Ansible</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">GitOps</span>
+            </div>
+            <a href="https://github.com/ryyyyan-taylor/homelab" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/homelab/homepage.png" alt="Services"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/homelab/dashboard.png" alt="Dashboard"></div>
+              <div class="carousel-slide placeholder-slide"><img src="assets/img/homelab/kubernetes.png" alt="Cluster"></div>
+            </div>
+            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
+            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
 
         <div class="project-item">
           <div class="project-info">
@@ -366,32 +400,6 @@
             <div class="carousel-track">
               <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/main.png" alt="VimMail inbox view"></div>
               <div class="carousel-slide placeholder-slide"><img src="assets/img/vimmail/visual.png" alt="VimMail visual mode"></div>
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
-            <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>
-            <div class="carousel-dots">
-              <span class="dot active"></span>
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-info">
-            <h3>Calorie Tracker</h3>
-            <p>A mobile-first calorie tracking app with plain-text food logging and AI-powered parsing.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">GPT-4o mini</span>
-              <span class="tag">Supabase</span>
-            </div>
-            <a href="https://github.com/ryyyyan-taylor/calorie-tracker" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
-          </div>
-          <div class="carousel" data-carousel>
-            <div class="carousel-track">
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/main.png" alt="Calorie tracker main view"></div>
-              <div class="carousel-slide placeholder-slide"><img src="assets/img/calories/entry.png" alt="Food entry screen"></div>
             </div>
             <button class="carousel-btn carousel-prev" aria-label="Previous">&#8249;</button>
             <button class="carousel-btn carousel-next" aria-label="Next">&#8250;</button>

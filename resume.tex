@@ -169,6 +169,12 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeProjectHeading
+      {\textbf{HomeLab} $|$ \emph{Terraform, Ansible, Talos, Kubernetes, ArgoCD, Traefik, Prometheus, Loki, SOPS}}{}
+      \resumeItemListStart
+        \resumeItem{Single-node Proxmox host running a three-VM Talos Kubernetes cluster managed via ArgoCD GitOps; VMs provisioned with Terraform and configured with Ansible}
+        \resumeItem{Full platform stack deployed across 17 sync waves: Traefik ingress with Let's Encrypt wildcard TLS, Authentik SSO with forward-auth, kube-prometheus-stack, Loki log aggregation, and SOPS/age encrypted secrets decrypted in-cluster via KSOPS}
+      \resumeItemListEnd
+    \resumeProjectHeading
       {\textbf{WhatAmI.cooking} $|$ \emph{React, FastAPI, EC2, DynamoDB, Cognito}}{}
       \resumeItemListStart
         \resumeItem{Full-stack meal planning app with OAuth, weekly planner, auto-generated shopping lists, and a URL importer that scrapes recipes from any site; deployed end-to-end on AWS Elastic Beanstalk}
@@ -178,15 +184,6 @@
       \resumeItemListStart
         \resumeItem{Full-featured Magic: The Gathering and Star Wars: Unlimited deck builder with live card data from Scryfall, suggestions from EDHREC, and tournament results from EDHTop16 and MTGTop8}
       \resumeItemListEnd
-    %   {\textbf{VimMail} $|$ \emph{Next.js, Gmail API, Flutter}}{}
-    %   \resumeItemListStart
-    %     \resumeItem{Keyboard-driven Gmail client inspired by Vim's modal editing, with a companion Flutter mobile app for quick mail triaging}
-    %   \resumeItemListEnd
-    % \resumeProjectHeading
-    %   {\textbf{Calorie Tracker} $|$ \emph{Next.js, GPT-4o mini, Supabase}}{}
-    %   \resumeItemListStart
-    %     \resumeItem{Mobile-first calorie tracking app with plain-text food logging and AI-powered nutritional parsing}
-    %   \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -194,7 +191,7 @@
 \section{Technical Skills}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{Infrastructure \& DevOps}{: Terraform, Ansible, Kubernetes (k3s), GitHub Actions, Docker} \\
+      \textbf{Infrastructure \& DevOps}{: Terraform, Ansible, Kubernetes, ArgoCD, Traefik, Prometheus/Grafana, Loki, GitHub Actions, Docker} \\
       \textbf{Linux \& Systems}{: RHEL, Linux appliance OS, Linux system administration} \\
       \textbf{Languages \& Frameworks}{: Python, Bash, React, Next.js, FastAPI} \\
       \textbf{Platforms \& Tools}{: AWS, Vercel, Supabase, Atlassian Suite, IBM ELM, Git} \\
