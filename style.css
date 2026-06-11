@@ -41,13 +41,13 @@
   --text-secondary: #b4b4b4;
   --text-muted: #8f8f8f;
 
-  /* Single restrained accent: warm amber */
-  --accent: #d8a657;
-  --accent-dim: rgba(216, 166, 87, 0.12);
+  /* Single restrained accent: crystal blue */
+  --accent: #7e9cd8;
+  --accent-dim: rgba(126, 156, 216, 0.12);
 
   /* Borders — hairline */
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(216, 166, 87, 0.4);
+  --border-accent: rgba(126, 156, 216, 0.4);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -283,8 +283,8 @@ nav a.active {
 }
 
 .btn-primary:hover {
-  background: #e6b86a;
-  border-color: #e6b86a;
+  background: #97b0e0;
+  border-color: #97b0e0;
   color: #0c0c0c;
 }
 
