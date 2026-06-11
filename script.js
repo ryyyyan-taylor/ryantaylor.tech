@@ -1,12 +1,5 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Cursor-following spotlight effect
-document.addEventListener('mousemove', (e) => {
-  document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
-  document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
-  document.body.classList.add('cursor-active');
-});
-
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navMenu = document.getElementById('nav-menu');
